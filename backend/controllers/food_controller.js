@@ -28,14 +28,24 @@ const getFood = async (req, res) => {
 const createFood = async (req, res) => {
     const {name, calories} = req.body
 
+    //Show empty fields
+    let emptyFields = []
+    if(!name){
+        emptyFields.push('name')
+    }
+    if(!calories){
+        emptyFields.push('calories')
+    }
+    if(emptyFields.length > 0){
+        return res.status(400).json({error: 'Please fill in all the fields', emptyFields})
+    }
+
     try {
         const food = await Food.create({name, calories})
         res.status(200).json(food)
     } catch (error) {
         res.status(400).json({error: error.message})
     }
-
-    res.json({mssg: 'post a food'})
 }
 
 //delete a food

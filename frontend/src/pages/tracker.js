@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
+import { useFoodsContext } from '../hooks/useFoodContext'
 
 //components
 import FoodDetails from "../components/foodDetails"
+import AddFood from "../components/addFood"
 
 const Tracker = () => {
-    const [foods, setFoods] = useState(null)
+    const {foods, dispatch} = useFoodsContext()    
 
     useEffect(() => {
         const fetchFoods = async () => {
@@ -12,20 +14,22 @@ const Tracker = () => {
             const json = await response.json()
 
             if(response.ok){
-                setFoods(json)
+                dispatch({type: 'SET_FOODS', payload: json})
             }
         }
 
         fetchFoods()
-    }, [])
+    }, [dispatch])
     
     return (
         <div className="tracker">
+            
             <div className="foods">
                 {foods && foods.map((food) => (
                     <FoodDetails key={food._id} food={food}></FoodDetails>
                 ))}
             </div>
+            <AddFood/>
         </div>
     )
 }

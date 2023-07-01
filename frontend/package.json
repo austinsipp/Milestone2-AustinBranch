@@ -1,5 +1,5 @@
 {
-  "proxy": "http://127.0.0.1:3005",
+  "proxy": "http://127.0.0.1:3005/",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
