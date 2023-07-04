@@ -56,7 +56,17 @@ header a {
   font-size: 0.9em;
   color: #555;
 }
-.food-details span {
+.food-details .editF {
+  position: absolute;
+  top: 20px;
+  right: 80px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+.food-details .deleteF {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -66,6 +76,8 @@ header a {
   border-radius: 50%;
   color: #333;
 }
+
+
 
 /* add food form */
 label, input {
