@@ -36,7 +36,7 @@ const FoodDetails = ({ key, food, recordId }) => {
         const json = await response.json()
 
         if (response.ok) {
-            dispatch({ type: 'UPDATE_FOOD', payload: json })
+            dispatch({ type: 'UPDATE_FOOD', payload: {editedRecord, recordId} })
         }
         setRowBeingEdited('')
     }
@@ -49,7 +49,7 @@ const FoodDetails = ({ key, food, recordId }) => {
 
     return (
         <div className="food-details">
-            {!(String(rowBeingEdited) === String(recordId)) ?
+            {!(String(rowBeingEdited) === String(food._id)) ?
                 <>
                     <p><strong>Name: </strong>{food.name}</p>
                     <p><strong>Calories: </strong>{food.calories}</p>
@@ -64,7 +64,7 @@ const FoodDetails = ({ key, food, recordId }) => {
                         }
                         }
                     ></input></p>
-                    <p><label>Calories:</label><input type="text" 
+                    <p><label>Calories:</label><input type="number" 
                         onChange={(e) => {
                             setEditedRecord({ ...editedRecord, calories: String(e.target.value) })
                         }

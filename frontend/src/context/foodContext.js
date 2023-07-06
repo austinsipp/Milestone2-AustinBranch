@@ -17,6 +17,20 @@ export const foodsReducer = (state, action) => {
             return {
                 foods: state.foods.filter((f) => f._id !== action.payload._id) //filter the array and keep all the foods where the id is defferent to the f._id 
             }
+        case 'UPDATE_FOOD':
+            return {
+                foods: state.foods.map((f) => {
+                    console.log(f._id)
+                    console.log(action.payload.recordId)
+                    console.log("f",f)
+                    console.log("action.payload",action.payload)
+                    if (f._id === action.payload.recordId) {
+                        f.name = action.payload.editedRecord.name
+                        f.calories = action.payload.editedRecord.calories
+                    }
+                    return f
+                }) //filter the array and keep all the foods where the id is defferent to the f._id 
+            }
         default:
             return state
     }
