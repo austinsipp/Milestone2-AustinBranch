@@ -1,8 +1,8 @@
 import {useState} from 'react'
-import { useFoodsContext } from '../hooks/useFoodContext'
+//import { useFoodsContext } from '../hooks/useFoodContext'
 
-const AddFood = () =>{
-    const {dispatch} = useFoodsContext()
+const AddFood = ({displaySetter}) =>{
+    //const {dispatch} = useFoodsContext()
     const [name, setName] = useState('')
     const [calories, setCalories] = useState('')
     const [error, setError] = useState(null)
@@ -39,7 +39,8 @@ const AddFood = () =>{
             setError(null)
             setEmptyFields([])
             console.log('new food added', json)
-            dispatch({type: 'CREATE_FOODS', payload: json})
+            //dispatch({type: 'CREATE_FOODS', payload: json})
+            displaySetter()/*see comments in foodContext.js and tracker.js for explanation of why we have the page re-render, instead of using the dispatch action here*/
         }
     }
 
