@@ -4,6 +4,16 @@ export const FoodsContext = createContext() //create context
 
 export const foodsReducer = (state, action) => {
     //switch funtion to look for all the cases of the action.type
+    /*
+    This reducer defines a bunch of CRUD operations on the state.foods variable that is
+    local to the browser. Previously we had to do this to make the what is displayed in 
+    the browser, i.e. the state.foods variable match what is in the database. We would 
+    send the fetch request to the databse and then in parallel do the same change to
+    our local state.foods variable. Instead of doing this we now simply run only the
+    SET_FOODS function, basically re-rendering from the database every time an action is 
+    completed. This keeps us from having issues where the state.foods variable doesn't
+    match the database exactly. Only the SET_FOODs action gets used anymore.
+    */
     switch(action.type) {
         case 'SET_FOODS':
             return {
@@ -16,6 +26,20 @@ export const foodsReducer = (state, action) => {
         case 'DELETE_FOOD':
             return {
                 foods: state.foods.filter((f) => f._id !== action.payload._id) //filter the array and keep all the foods where the id is defferent to the f._id 
+            }
+        case 'UPDATE_FOOD':
+            return {
+                foods: state.foods.map((f) => {
+                    console.log(f._id)
+                    console.log(action.payload.recordId)
+                    console.log("f",f)
+                    console.log("action.payload",action.payload)
+                    if (f._id === action.payload.recordId) {
+                        f.name = action.payload.editedRecord.name
+                        f.calories = action.payload.editedRecord.calories
+                    }
+                    return f
+                }) //filter the array and keep all the foods where the id is defferent to the f._id 
             }
         default:
             return state
