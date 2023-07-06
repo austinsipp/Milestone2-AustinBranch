@@ -76,6 +76,26 @@ header a {
   border-radius: 50%;
   color: #333;
 }
+.food-details .confirmF {
+  /*position: absolute;*/
+  top: 20px;
+  right: 80px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+.food-details .cancelF {
+  /*position: absolute;*/
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
 
 
 
