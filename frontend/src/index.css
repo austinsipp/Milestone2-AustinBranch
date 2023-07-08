@@ -3,17 +3,19 @@
 
 /* layout */
 :root {
-  --primary: #1aac83;
+  --primary: #1aac83
   --error: #e7195a;
 }
 body {
-  background: #f1f1f1;
+  background: #B2D9F5;
   margin: 0;
   font-family: "Poppins";
 }
+
 header {
-  background: #fff;
+  background: #3A92BF;
 }
+
 header .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -22,8 +24,9 @@ header .container {
   align-items: center;
   justify-content: space-between;
 }
+
 header a {
-  color: #333;
+  color: white;
   text-decoration: none;
 }
 .pages{
@@ -113,7 +116,7 @@ input {
   box-sizing: border-box;
 }
 form button {
-  background: var(--primary);
+  background: #3A92BF;
   border: 0;
   color: #fff;
   padding: 10px;
@@ -133,3 +136,22 @@ div.error {
 input.error {
   border: 1px solid var(--error);
 }
+
+.intro {
+  text-align: center;
+  background-color: white;
+  padding: 30px;
+  margin: 100px;
+  position: absolute;
+  top: 45%;
+}
+  
+  
+.homeImage {
+  padding: 0;
+  margin: auto;
+  align-content: center;
+  width: 100%;
+  border-radius: 10px;
+}
+  
