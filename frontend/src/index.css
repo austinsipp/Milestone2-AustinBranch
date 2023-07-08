@@ -133,3 +133,21 @@ div.error {
 input.error {
   border: 1px solid var(--error);
 }
+
+.intro {
+  text-align: center;
+  background-color: white;
+  padding: 30px;
+  margin: 100px;
+  position: absolute;
+  top: 45%;
+  }
+  
+  
+  img {
+  padding: 0;
+  margin: 0;
+  align-content: center;
+  width: 100%;
+  }
+  
