@@ -133,3 +133,19 @@ div.error {
 input.error {
   border: 1px solid var(--error);
 }
+
+.CardContainer {
+display: flex;
+margin: 40px;
+flex-wrap: wrap;
+justify-content: center;
+border-radius: 10px;
+box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+
+}
+
+.Card-About {
+
+margin: 25px;  
+
+}
