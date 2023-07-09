@@ -2,7 +2,7 @@ import homeImage from '../images/home-image.png'
 
 
 const Home = () =>{
-    return <div>
+    return <div className="home-container">
         <img src={homeImage} alt="Nutritious foods" className="homeImage"/>
         <div class="intro">
             <h1>WELCOME!</h1>

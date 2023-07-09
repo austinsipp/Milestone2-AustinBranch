@@ -136,22 +136,52 @@ div.error {
 input.error {
   border: 1px solid var(--error);
 }
+  
+/*Home page*/
 
-.intro {
-  text-align: center;
-  background-color: white;
-  padding: 30px;
-  margin: 100px;
-  position: absolute;
-  top: 45%;
+.home-container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
-  
-  
+
 .homeImage {
   padding: 0;
   margin: auto;
-  align-content: center;
-  width: 100%;
+  width: 1100px;
   border-radius: 10px;
+
+}
+
+.intro {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.503);
+  padding: 30px;
+  position: absolute;
+  margin-top: 15%;
+  width: 50%;
 }
   
+/*About page*/
+
+.about-container{
+  margin-top: 30px;
+}
+
+.CardContainer{
+  display: flex;
+  padding: 15px;
+  width: 100%;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  background-color: #3A92BF
+}
+
+.CardContainer h2{
+  display: block;
+}
+
+.Card-About{
+  width: 18rem;
+  padding: 15px;
+}
