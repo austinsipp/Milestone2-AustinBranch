@@ -8,7 +8,7 @@ const FoodDetails = ({ key, food, displaySetter }) => {
 
     const handleClickDelete = async () => {
         //get the food through the api + the food id 
-        const response = await fetch('/api/foods/' + food._id, {
+        const response = await fetch('https://milestone-project2-mern-app-c8267116782f.herokuapp.com/api/foods/' + food._id, {
             method: 'DELETE'
         })
         const json = await response.json()
@@ -27,7 +27,7 @@ const FoodDetails = ({ key, food, displaySetter }) => {
     const onEditConfirmClick = async (e) => {
         e.preventDefault()
         console.log("editedRecord",editedRecord)
-        const response = await fetch('/api/foods/' + food._id, {
+        const response = await fetch('https://milestone-project2-mern-app-c8267116782f.herokuapp.com/api/foods/' + food._id, {
             method: 'PATCH',
             body: JSON.stringify(editedRecord),
             headers: {

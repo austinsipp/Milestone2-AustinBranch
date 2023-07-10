@@ -18,12 +18,12 @@ app.use((req, res, next) => {
 app.use('/api/foods', Foods)
 
 //connect to db
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect("mongodb+srv://the_ACE_team:3JDjDzrarqJWKPKF@milestoneproject2.5b61vwy.mongodb.net/", {
     useNewUrlParser: true, 
     useUnifiedTopology: true
   })
 
 //listen for requests
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3005, () => {
     console.log('connected to mongo and listening on port ', process.env.PORT);
 })

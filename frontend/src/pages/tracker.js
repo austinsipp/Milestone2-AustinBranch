@@ -20,7 +20,7 @@ const Tracker = () => {
     action, so what is displayed will always match what the database says
     */
     const refreshFromDatabase = async () => {
-        const response = await fetch('/api/foods')
+        const response = await fetch('https://milestone-project2-mern-app-c8267116782f.herokuapp.com/api/foods')
         const json = await response.json()
 
 
@@ -38,7 +38,7 @@ const Tracker = () => {
 
     useEffect(() => {
         const fetchFoods = async () => {
-            const response = await fetch('/api/foods')
+            const response = await fetch('https://milestone-project2-mern-app-c8267116782f.herokuapp.com/api/foods')
             const json = await response.json()
 
             if(response.ok){

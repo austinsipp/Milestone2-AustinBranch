@@ -16,7 +16,7 @@ const AddFood = ({displaySetter}) =>{
         const food = {name, calories}
 
         //fetch to the api to make a post request
-        const response = await fetch('/api/foods',{
+        const response = await fetch('https://milestone-project2-mern-app-c8267116782f.herokuapp.com/api/foods',{
             method: 'POST',
             body: JSON.stringify(food), //make the object json 
             headers: {
