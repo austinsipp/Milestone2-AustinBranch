@@ -3,7 +3,7 @@
 
 /* layout */
 :root {
-  --primary: #1aac83
+  --primary: #1aac83;
   --error: #e7195a;
 }
 body {
@@ -80,7 +80,6 @@ header a {
   color: #333;
 }
 .food-details .confirmF {
-  /*position: absolute;*/
   top: 20px;
   right: 80px;
   cursor: pointer;
@@ -90,7 +89,6 @@ header a {
   color: #333;
 }
 .food-details .cancelF {
-  /*position: absolute;*/
   top: 20px;
   right: 20px;
   cursor: pointer;
