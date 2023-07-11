@@ -75,7 +75,7 @@ function About() {
           />
           <Card.Body>
             <Card.Title>Austin Sipp</Card.Title>
-            <Card.Text>Austin Sip</Card.Text>
+            <Card.Text>Austin Bio</Card.Text>
           </Card.Body>
           <ListGroup className="list-group-flush">
             <ListGroup.Item>Back-end Developer</ListGroup.Item>
@@ -90,11 +90,11 @@ function About() {
         <Card >
           <Card.Img
             variant="top"
-            src="https://avatars.githubusercontent.com/u/118779304?v=4"
+            src="https://avatars.githubusercontent.com/u/120067975?v=4"
           />
           <Card.Body>
-            <Card.Title>Edwin Tolerino</Card.Title>
-            <Card.Text>Edwin Tolerino</Card.Text>
+            <Card.Title>Edwin Tolentino</Card.Title>
+            <Card.Text>Edwin Bio</Card.Text>
           </Card.Body>
           <ListGroup className="list-group-flush">
             <ListGroup.Item>Graphic Designer</ListGroup.Item>
