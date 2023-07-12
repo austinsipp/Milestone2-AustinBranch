@@ -53,8 +53,7 @@ We only have one collection in our NoSQL database. It has documents that have on
 
 
 ## License
-
-https://tenor.com/view/xx-ron-swanson-i-have-a-permit-i-can-do-what-i-want-parks-and-recreation-gif-15660350
+This project is licensed under the MIT License - see the LICENSE.md file for details.
 
 
 ## Acknowledgments
