@@ -1,0 +1,16 @@
+@use 'config';
+@use 'functions';
+
+@mixin top20right80 {
+    top: functions.fourxpixels(config.$starting-pixels);
+    right: functions.sixteenxpixels(config.$starting-pixels);
+}
+
+@mixin top20right20 {
+    top: functions.fourxpixels(config.$starting-pixels);
+    right: functions.fourxpixels(config.$starting-pixels);
+}
+
+@mixin addpadding ($numpixels) {
+    padding: $numpixels * 1px;
+} 

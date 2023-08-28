@@ -1,0 +1,210 @@
+@use 'config';
+@use 'functions';
+@use 'mixins';
+
+
+
+
+/* layout */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+body {
+  background: config.$main-background;
+  margin: 0;
+  font-family: config.$font-family;
+}
+
+header {
+    & {
+        background: config.$navbar-background;
+    }
+    .container {
+        max-width: config.$max-width;
+        margin: 0 auto;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    a {
+        color: config.$navbar-link-color;
+        text-decoration: none;
+    }
+  
+}
+
+
+.pages{
+  max-width: config.$max-width;
+  @include mixins.addpadding(20);
+  /*padding: 20px;*/
+  margin: 0 auto;
+}
+
+/* Tracker */
+.tracker {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+}
+.food-details {
+    & {
+        background: config.$food-details-background;
+        border-radius: 4px;
+        margin: 20px auto;
+        @include mixins.addpadding(20);
+        /*padding: 20px;*/
+        position: relative;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+    }
+    h4 {
+        margin: 0 0 10px 0;
+        font-size: 1.2em;
+        color: var(--primary);
+    }
+    p {
+        margin: 0;
+        font-size: 0.9em;
+        color: config.$food-details-paragraph-color;
+    }
+    .editF {
+        position: absolute;
+        @include mixins.top20right80();
+        /*top: 20px;
+        right: 80px;*/
+        cursor: pointer;
+        background: config.$food-details-children-color;
+        @include mixins.addpadding(6);
+        /*padding: 6px;*/
+        border-radius: 50%;
+        color: #333;
+    }
+    .deleteF {
+        position: absolute;
+        @include mixins.top20right20();
+        /*top: 20px;
+        right: 20px;*/
+        cursor: pointer;
+        background: config.$food-details-children-color;
+        @include mixins.addpadding(6);
+        /*padding: 6px;*/
+        border-radius: 50%;
+        color: #333;
+    }
+    .confirmF {
+        @include mixins.top20right80();
+        /*top: 20px;
+        right: 80px;*/
+        cursor: pointer;
+        background: config.$food-details-children-color;
+        @include mixins.addpadding(6);
+        /*padding: 6px;*/
+        border-radius: 50%;
+        color: #333;
+    }
+    .cancelF {
+        @include mixins.top20right20();
+        /*top: 20px;
+        right: 20px;*/
+        cursor: pointer;
+        background: config.$food-details-children-color;
+        @include mixins.addpadding(6);
+        /*padding: 6px;*/
+        border-radius: 50%;
+        color: #333;
+    }
+  
+}
+
+
+/* add food form */
+label, input {
+  display: block;
+}
+input {
+  @include mixins.addpadding(10);
+  /*padding: 10px;*/
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button {
+  background: config.$navbar-background;
+  border: 0;
+  color: config.$food-details-background;
+  @include mixins.addpadding(10);
+  /*padding: 10px;*/
+  font-family: config.$font-family;
+  border-radius: 4px;
+  cursor: pointer;
+}
+div.error {
+  @include mixins.addpadding(10);
+  /*padding: 10px;*/
+  background: config.$error-background;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+input.error {
+  border: 1px solid var(--error);
+}
+  
+/*Home page*/
+
+.home-container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.homeImage {
+  padding: 0;
+  margin: auto;
+  width: 1100px;
+  border-radius: 10px;
+
+}
+
+.intro {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.503);
+  @include mixins.addpadding(30);
+  /*padding: 30px;*/
+  position: absolute;
+  margin-top: 15%;
+  width: 50%;
+}
+  
+/*About page*/
+
+.about-container{
+  margin-top: 30px;
+}
+
+.CardContainer{
+  display: flex;
+  @include mixins.addpadding(15);
+  /*padding: 15px;*/
+  width: 100%;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  background-color: config.$navbar-background
+}
+
+.CardContainer h2{
+  display: block;
+}
+
+.Card-About{
+  width: 18rem;
+  @include mixins.addpadding(15);
+  /*padding: 15px;*/
+}

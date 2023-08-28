@@ -1,0 +1,7 @@
+@function fourxpixels ($px) {
+    @return 4 * $px
+};
+
+@function sixteenxpixels ($px) {
+    @return 4 * $px
+};
