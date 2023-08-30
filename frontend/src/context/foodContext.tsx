@@ -47,7 +47,7 @@ export const foodsReducer = (state: any, action: any) => {
 }
 
 //export provider to use in index.js
-export const FoodContextProvider = (children:any) => {
+export const FoodContextProvider = ({children}:any) => {
     //reducer
     const [state, dispatch] = useReducer(foodsReducer, {
         foods: null
