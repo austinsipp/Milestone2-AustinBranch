@@ -1,15 +1,20 @@
 import {useState} from 'react'
 //import { useFoodsContext } from '../hooks/useFoodContext'
 
-const AddFood = ({displaySetter}) =>{
+interface emptyFieldsType {
+    emptyFields: [];
+    setEmptyFields: Function;
+}
+
+const AddFood = (displaySetter:any) =>{
     //const {dispatch} = useFoodsContext()
     const [name, setName] = useState('')
     const [calories, setCalories] = useState('')
     const [error, setError] = useState(null)
-    const [emptyFields, setEmptyFields] = useState([])
+    const [emptyFields, setEmptyFields] = useState<any>([])
 
     //Handle submit method
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e:any) => {
         e.preventDefault()
 
         //define the object

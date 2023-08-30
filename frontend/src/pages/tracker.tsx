@@ -6,7 +6,7 @@ import FoodDetails from "../components/foodDetails"
 import AddFood from "../components/addFood"
 
 const Tracker = () => {
-    const {foods, dispatch} = useFoodsContext()    
+    const {foods, dispatch} : any = useFoodsContext()    
 
 
     /*
@@ -53,8 +53,8 @@ const Tracker = () => {
         <div className="tracker">
             
             <div className="foods">
-                {foods && foods.map((food) => (
-                    <FoodDetails key={food._id} food={food} displaySetter={refreshFromDatabase}></FoodDetails>
+                {foods && foods.map((food:any) => (
+                    <FoodDetails key={food._id} food={food} displaySetter={refreshFromDatabase} />
                 ))}
             </div>
             <AddFood displaySetter={refreshFromDatabase}/>

@@ -1,8 +1,8 @@
 import {createContext, useReducer} from 'react'
 
-export const FoodsContext = createContext() //create context
+export const FoodsContext = createContext(null) //create context
 
-export const foodsReducer = (state, action) => {
+export const foodsReducer = (state: any, action: any) => {
     //switch funtion to look for all the cases of the action.type
     /*
     This reducer defines a bunch of CRUD operations on the state.foods variable that is
@@ -25,11 +25,11 @@ export const foodsReducer = (state, action) => {
             }
         case 'DELETE_FOOD':
             return {
-                foods: state.foods.filter((f) => f._id !== action.payload._id) //filter the array and keep all the foods where the id is defferent to the f._id 
+                foods: state.foods.filter((f:any) => f._id !== action.payload._id) //filter the array and keep all the foods where the id is defferent to the f._id 
             }
         case 'UPDATE_FOOD':
             return {
-                foods: state.foods.map((f) => {
+                foods: state.foods.map((f:any) => {
                     console.log(f._id)
                     console.log(action.payload.recordId)
                     console.log("f",f)
@@ -47,7 +47,7 @@ export const foodsReducer = (state, action) => {
 }
 
 //export provider to use in index.js
-export const FoodContextProvider = ({children}) => {
+export const FoodContextProvider = (children:any) => {
     //reducer
     const [state, dispatch] = useReducer(foodsReducer, {
         foods: null
