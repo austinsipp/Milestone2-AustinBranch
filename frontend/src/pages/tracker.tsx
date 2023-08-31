@@ -57,7 +57,7 @@ const Tracker = () => {
                     <FoodDetails key={food._id} food={food} displaySetter={refreshFromDatabase} />
                 ))}
             </div>
-            <AddFood displaySetter={refreshFromDatabase}/>
+            <AddFood displaySetter={refreshFromDatabase} />
         </div>
     )
 }

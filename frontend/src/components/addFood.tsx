@@ -6,7 +6,12 @@ interface emptyFieldsType {
     setEmptyFields: Function;
 }
 
-const AddFood = (displaySetter:any) =>{
+
+interface displaySetterType {
+    displaySetter: () => Promise<void>
+}
+
+const AddFood = (displaySetter:displaySetterType) => {
     //const {dispatch} = useFoodsContext()
     const [name, setName] = useState('')
     const [calories, setCalories] = useState('')
